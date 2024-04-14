@@ -17,8 +17,8 @@ public class SplitBillTestClass
     [TestMethod]
     public void return_exeption_when_numberOfPepleIsZero()
     {
-        var ret = splitBill.AcceptTheAmountAndNumberOfPeopleReturnSplitAmount(0, 5);
-        Assert.ThrowsException<DivideByZeroException>(()=> ret);
+        //var ret = splitBill.AcceptTheAmountAndNumberOfPeopleReturnSplitAmount(0, 5);
+        Assert.ThrowsException<DivideByZeroException>(()=> splitBill.AcceptTheAmountAndNumberOfPeopleReturnSplitAmount(0, 5));
     }
 
     [TestMethod]
