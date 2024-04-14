@@ -2,7 +2,8 @@ namespace SplitTheBill;
 
 public class TipPercentage{
     public Dictionary<string, decimal> getTipPercentageCalculated(Dictionary<string, decimal> detail, float tipPercentage){
-        Dictionary<string, decimal> nameAndTip = new Dictionary<string, decimal>();
+
+        Dictionary<string, decimal> namesAndTips = new Dictionary<string, decimal>();
 
         decimal totalMealCost = 0;
 
@@ -13,11 +14,11 @@ public class TipPercentage{
         decimal totalTipAmount = totalMealCost * (decimal)(tipPercentage/100);
 
         foreach(var single in detail){
-            decimal tipForPerson = (single.Value / totalMealCost) * totalTipAmount;
-            nameAndTip.Add(single.Key, tipForPerson);
+            decimal tipForAPerson = (single.Value / totalMealCost) * totalTipAmount;
+            namesAndTips.Add(single.Key, tipForAPerson);
         }
 
-        return nameAndTip;
+        return namesAndTips;
     }
 
 }
