@@ -24,4 +24,12 @@ public class TipPercentageTest
 
     }
 
+    [TestMethod]
+    public void retuning_Zero_Amount_Paid_ForTheTip_WhenZeroTipPercentageIsPassed(){
+        float tipPercent = 0.0f;
+        var ret = tipPercentage.getTipPercentageCalculated(mealDetails, tipPercent);
+        Assert.AreEqual(0, ret["Lawal"]);
+        Assert.AreEqual(0, ret["Tunde"]);
+        Assert.AreEqual(0, ret["Prof Brent"]);
+    }
 }
