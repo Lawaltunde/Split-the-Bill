@@ -1,6 +1,6 @@
 namespace SplitTheBill;
 
-using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic;
 using SplitTheBill;
 
 [TestClass]
