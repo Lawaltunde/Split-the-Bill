@@ -26,4 +26,13 @@ public class TipPersonTest{
         var ret = tipPersonMethod.tipPerPerson(price, patrons, tipercentage);
         Assert.AreEqual(0, (double)ret);
     }
+    [TestMethod]
+    public void return_Zero_When_Price_Value_IsZero_And_Other_Parameters_ArePassed(){
+        decimal price = 0.0M; 
+        int patrons = 5;
+        float tipercentage = 25.0f; 
+
+        var ret = tipPersonMethod.tipPerPerson(price, patrons, tipercentage);
+        Assert.AreEqual(0, (double)ret);
+    }
 }
