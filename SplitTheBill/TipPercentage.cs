@@ -17,8 +17,14 @@ public class TipPercentage{
             decimal tipForAPerson = (single.Value / totalMealCost) * totalTipAmount;
             namesAndTips.Add(single.Key, tipForAPerson);
         }
+        
+        if(namesAndTips.Count == 0 ){
+            return null;
+        }
 
         return namesAndTips;
     }
+
+    
 
 }

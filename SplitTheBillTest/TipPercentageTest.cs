@@ -32,4 +32,11 @@ public class TipPercentageTest
         Assert.AreEqual(0, ret["Tunde"]);
         Assert.AreEqual(0, ret["Prof Brent"]);
     }
+    [TestMethod]
+    public void return_Empty_Dictionary_When_Empty_Value_Of_Dictionary_Is_Passed_AsParameter(){
+        Dictionary<string, decimal> mealDetails = new Dictionary<string, decimal>();
+        var ret = tipPercentage.getTipPercentageCalculated(mealDetails, tipPercent);
+        Assert.IsNull(ret);
+        Assert.AreEqual(null, ret);
+    }
 }
